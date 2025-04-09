@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | InstaMeds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-animation" id="bg-animation"></div>
+    
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo">InstaMeds</div>
+            </div>
+            <h1>About InstaMeds</h1>
+            <p>India's Premier Healthcare Platform</p>
+            <a href="#services" class="golden-button">Discover Our Services</a>
+        </div>
+    </header>
+    
+    <div class="about-us">
+        <h2 class="section-title">Our Story</h2>
+        
+        <div class="about-us-box">
+            <div class="golden-highlight"></div>
+            <p><b>Stay Healthy with InstaMeds: Your Favourite Online Pharmacy and Healthcare Platform</b></p>
+            <p>Redefining healthcare excellence through digital innovation and personalized care.</p>
+        </div>
+
+        <div class="about-us-box">
+            <div class="golden-highlight"></div>
+            <p><b>We Bring Care to Health.</b></p>
+            <p>A philosophy that guides our every decision, ensuring we deliver not just medicines, but comprehensive care.</p>
+        </div> 
+
+        <div class="about-us-box">
+            <div class="golden-highlight"></div>
+            <p>InstaMeds is India's leading digital healthcare platform. From doctor consultations on chat to online pharmacy and lab tests at home: we have it all covered for you. Having delivered over 25 million orders in 1000+ cities till date, we are on a mission to bring "care" to "health" to give you a flawless healthcare experience.</p>
+        </div>
+
+        <section class="stats-counter">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="25">0</div>
+                    <div class="stat-title">Million Orders</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number" data-count="1000">0</div>
+                    <div class="stat-title">Cities Served</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-title">Customer Satisfaction</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number" data-count="200000">0</div>
+                    <div class="stat-title">Available Medicines</div>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="section-title" id="services">Our Premium Services</h2>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">💊</div>
+                <h3 class="feature-title">Online Pharmacy</h3>
+                <p>Over 2 lakh medicines available at the best prices delivered to your doorstep.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🩺</div>
+                <h3 class="feature-title">Doctor Consultations</h3>
+                <p>Connect with over 20 kinds of specialists with just a few clicks.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🧪</div>
+                <h3 class="feature-title">Lab Tests at Home</h3>
+                <p>Over 2,000 tests from 120+ top verified labs at competitive prices.</p>
+            </div>
+        </div>
+
+        <div class="about-us-box">
+            <div class="golden-highlight"></div>
+            <p><b>InstaMeds: Your Favourite Online Pharmacy!</b></p>
+            <p>InstaMeds is India's leading online chemist with over 2 lakh medicines available at the best prices. We are your one-stop destination for other healthcare products as well, such as over the counter pharmaceuticals, healthcare devices and homeopathy and ayurveda medicines.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-logo">InstaMeds</div>
+        <div class="footer-links">
+            <a href="Home.html" class="footer-link">Home</a>
+            <a href="#" class="footer-link">About Us</a>
+            <a href="#" class="footer-link">Services</a>
+            <a href="#" class="footer-link">Contact</a>
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="social-icon">f</a>
+            <a href="#" class="social-icon">t</a>
+            <a href="#" class="social-icon">in</a>
+            <a href="#" class="social-icon">ig</a>
+        </div>
+        <div class="newsletter">
+            <h3 class="newsletter-title">Subscribe to Our Newsletter</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your Email Address" class="newsletter-input" required>
+                <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+        </div>
+        <div class="copyright">© 2025 InstaMeds. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    
+            createBackgroundParticles();
+          
+            initScrollAnimations();
+     
+            initStatsCounter();
+         
+            initGoldenHighlight();
+          });
+          
+            function createBackgroundParticles() {
+            const bgAnimation = document.getElementById('bg-animation');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+              const particle = document.createElement('div');
+              particle.classList.add('bg-particle');
+              const size = Math.random() * 10 + 5;
+              particle.style.width = `${size}px`;
+              particle.style.height = `${size}px`;
+              particle.style.left = `${Math.random() * 100}%`;
+              particle.style.top = `${Math.random() * 100}%`;
+              particle.style.opacity = Math.random() * 0.5;
+              const duration = Math.random() * 15 + 10;
+              particle.style.animation = `float ${duration}s infinite ease-in-out`;
+              particle.style.animationDelay = `${Math.random() * 5}s`;
+              bgAnimation.appendChild(particle);
+            }
+          }
+          
+            function initScrollAnimations() {
+            const animatedElements = document.querySelectorAll('.section-title, .about-us-box, .feature-card, .testimonial-slider, .testimonial, .stat-number');
+            
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+                  observer.unobserve(entry.target);
+                }
+              });
+            }, { threshold: 0.2 });
+            
+            animatedElements.forEach(element => {
+              observer.observe(element);
+            });
+          }
+          
+          function initStatsCounter() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  const target = entry.target;
+                  const targetNumber = parseInt(target.getAttribute('data-count'));
+                  let count = 0;
+                  const duration = 2000; 
+                  const increment = targetNumber / (duration / 16);
+                  
+                  const timer = setInterval(() => {
+                    count += increment;
+                    if (count >= targetNumber) {
+                      target.textContent = targetNumber.toLocaleString();
+                      clearInterval(timer);
+                    } else {
+                      target.textContent = Math.floor(count).toLocaleString();
+                    }
+                  }, 16);
+                  
+                  observer.unobserve(target);
+                }
+              });
+            }, { threshold: 0.5 });
+              statNumbers.forEach(stat => {
+              observer.observe(stat);
+            });
+          }
+          
+          function initGoldenHighlight() {
+            const highlightElements = document.querySelectorAll('.highlight');
+            
+            highlightElements.forEach(element => {
+              element.addEventListener('mouseover', () => {
+                element.classList.add('golden-glow');
+              });
+              
+              element.addEventListener('mouseout', () => {
+                element.classList.remove('golden-glow');
+              });
+            });
+          }
+    </script>
+</body>
+</html>
